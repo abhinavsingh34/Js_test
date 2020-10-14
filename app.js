@@ -1,9 +1,9 @@
 var output = [];
-(function() {
+(function() {/* istanbul ignore next */
     var array = [];
     var value = "";
     // API calling through Jquery AJAX Call
-    $(document).ready(function() {
+    $(document).ready(function() {/* istanbul ignore next */
         $.ajax({
             url: "https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json",
             type: "GET",
@@ -29,6 +29,7 @@ var output = [];
                         });
                     }
                 }
+                console.log(output);
                 //Dynamic Bindings using back ticks
                 for (let i = 0; i < output.length; i++) {/* istanbul ignore next */
                     value += `<div class="card col-sm-12 col-md-3  custom-card p-0" >
